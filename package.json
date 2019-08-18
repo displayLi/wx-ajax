@@ -1,6 +1,6 @@
 {
   "name": "wx-ajax",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "微信小程序 wx.request 二次封装支持Promise 和 callback 回调函数",
   "main": "main.js",
   "scripts": {
