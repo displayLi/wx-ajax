@@ -196,3 +196,7 @@ api2.ajax({
     }
 })
 ```
+
+Copy right Mason 有问题联系 QQ：463961434
+
+Author By Mason @ LINK + 创意工作室
