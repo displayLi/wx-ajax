@@ -19,6 +19,10 @@
     "weixin-ajax",
     "wechat-axios"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/displayLi/wx-ajax.git"
+  },
   "miniprogram": "dist",
   "author": "Mason",
   "license": "MIT"
