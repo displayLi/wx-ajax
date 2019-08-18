@@ -2,7 +2,7 @@
 
 <!-- logo -->
 <div align=center>
-    <img height="200" src="./logo.png"/>
+    <img height="200" src="https://raw.githubusercontent.com/displayLi/wx-ajax/master/logo.png"/>
 </div>
 
 ## 特性
@@ -11,6 +11,10 @@
 
 2、使用门槛低，容易上手，提供和axios相似体验，兼容低版本手机系统。
 
+![npm (scoped)](https://img.shields.io/badge/npm-v5.6.0-brightgreen.svg) 
+![installsize (scoped)](https://img.shields.io/badge/install%20size-74.2kb-yellow.svg) 
+![build (scoped)](https://img.shields.io/badge/build-passing-yellowgreen.svg) 
+![licenses (scoped)](https://img.shields.io/badge/licenses-MIT-blue.svg) 
 
 ## 安装
 
