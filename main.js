@@ -59,6 +59,55 @@ class Api {
             });
         });
     }
+    
+    // 公共 wx.request 请求
+    publicMethods({path, data, method = 'GET', header, dataType = 'json', success, error}) {
+        wx.request({
+            url: this.baseURL + path,
+            data: data || {},
+            header: header || {
+                "content-type": "application/json",
+                accessToken: wx.getStorageSync("token")   // 缓存里存的建议是token字段
+            },
+            method,
+            dataType,
+            success: ( data ) => {
+                success(data);
+            },
+            fail: err => {
+                error(err);
+                console.error(new Error(err));
+            }
+        });
+    }
+
+    // get 方法
+    get(path, data, header){
+        return new Promise((resolve, reject) => {
+            publicMethods({path, data, header, success: data => resolve(data), error: err => reject(err)})
+        })
+    }
+
+    // post 方法
+    post(path, data, header){
+        return new Promise((resolve, reject) => {
+            publicMethods({path, data, method:"POST", header, success: data => resolve(data), error: err => reject(err)})
+        })
+    }
+
+    // put 方法
+    put(path, data, header){
+        return new Promise((resolve, reject) => {
+            publicMethods({path, data, method:"PUT", header, success: data => resolve(data), error: err => reject(err)})
+        })
+    }
+
+    // delete 方法
+    delete(path, data, header){
+        return new Promise((resolve, reject) => {
+            publicMethods({path, data, method:"DELETE", header, success: data => resolve(data), error: err => reject(err)})
+        })
+    }
 
     hideLoading(endTime) {
         setTimeout(() => {
