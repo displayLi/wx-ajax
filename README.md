@@ -19,7 +19,7 @@
 ## 安装
 
 ```
-npm i wx-ajax --save-dev
+npm i wx-ajax -S --production
 ```
 
 ## 使用方法
@@ -199,6 +199,11 @@ api2.ajax({
         console.log(err);
     }
 })
+```
+***同样支持axios 方法 方法内接受三个参数 path：String， data：Object，header：Object (header选填，前两项必填)***
+```
+api.ajax('/posts',{ id: 1 }).then(res => console.log(res)).catch(err => console.log(err));
+
 ```
 
 Copy right Mason 有问题联系 QQ：463961434
