@@ -199,6 +199,7 @@ api2.ajax({
         console.log(err);
     }
 })
+
 ```
 ***同样支持axios 方法 方法内接受三个参数 path：String， data：Object，header：Object (header选填，前两项必填)***
 ```
