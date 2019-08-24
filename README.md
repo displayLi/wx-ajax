@@ -203,7 +203,7 @@ api2.ajax({
 ```
 ***同样支持axios 方法 方法内接受三个参数 path：String， data：Object，header：Object (header、data选填，path必填)***
 ```
-api.ajax('/posts',{ id: 1 }).then(res => console.log(res)).catch(err => console.log(err));
+api.ajax('/posts').then(res => console.log(res)).catch(err => console.log(err));
 
 ```
 
