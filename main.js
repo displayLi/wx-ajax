@@ -84,28 +84,28 @@ class Api {
     // get 方法
     get(path, data, header){
         return new Promise((resolve, reject) => {
-            publicMethods({path, data, header, success: data => resolve(data), error: err => reject(err)})
+            this.publicMethods({path, data, header, success: data => resolve(data), error: err => reject(err)})
         })
     }
 
     // post 方法
     post(path, data, header){
         return new Promise((resolve, reject) => {
-            publicMethods({path, data, method:"POST", header, success: data => resolve(data), error: err => reject(err)})
+            this.publicMethods({path, data, method:"POST", header, success: data => resolve(data), error: err => reject(err)})
         })
     }
 
     // put 方法
     put(path, data, header){
         return new Promise((resolve, reject) => {
-            publicMethods({path, data, method:"PUT", header, success: data => resolve(data), error: err => reject(err)})
+            this.publicMethods({path, data, method:"PUT", header, success: data => resolve(data), error: err => reject(err)})
         })
     }
 
     // delete 方法
     delete(path, data, header){
         return new Promise((resolve, reject) => {
-            publicMethods({path, data, method:"DELETE", header, success: data => resolve(data), error: err => reject(err)})
+            this.publicMethods({path, data, method:"DELETE", header, success: data => resolve(data), error: err => reject(err)})
         })
     }
 
